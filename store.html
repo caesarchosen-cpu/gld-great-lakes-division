@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Store · GLD · Great Lakes Division</title>
+  <meta name="description" content="GLD Great Lakes Division merchandise — placeholders only. Visit GLDGreatLakes.com." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0b3350;
+      --navy-deep: #071f32;
+      --navy-mid: #134266;
+      --red: #c0392b;
+      --red-dark: #9b2c21;
+      --cream: #f7f2e6;
+      --cream-dark: #ebe3d0;
+      --tan: #c4a574;
+      --tan-dark: #9a7b4f;
+      --olive: #6b7348;
+      --olive-muted: #8a9168;
+      --brown: #5c4030;
+      --brown-soft: #7a5a42;
+      --ink: #2a2118;
+      --muted: #5a4e3f;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(11, 51, 80, 0.10), transparent 50%),
+        linear-gradient(180deg, #e8dcc4 0%, var(--cream-dark) 12%, var(--cream) 40%, #faf6eb 100%);
+      color: var(--ink);
+      min-height: 100vh;
+      line-height: 1.65;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.75rem 1.25rem 3.25rem;
+    }
+
+    /* —— Seal first (centerpiece at top) —— */
+    .seal-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 0.25rem 0 1.35rem;
+    }
+
+    .seal-wrap img.seal {
+      width: min(280px, 78vw);
+      height: auto;
+      border-radius: 50%;
+      filter: drop-shadow(0 12px 24px rgba(7, 31, 50, 0.32));
+      background: var(--navy);
+    }
+
+    /* —— Header below seal —— */
+    header.masthead {
+      text-align: center;
+      padding: 0 0 0.15rem;
+    }
+
+    .stars-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .star {
+      width: 22px;
+      height: 22px;
+      fill: var(--tan-dark);
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
+    }
+
+    .title-block h1 {
+      font-family: Cinzel, "Times New Roman", serif;
+      font-weight: 700;
+      font-size: clamp(1.45rem, 4.2vw, 2.1rem);
+      letter-spacing: 0.08em;
+      color: var(--navy);
+    }
+
+    .title-block .subtitle {
+      font-family: Cinzel, serif;
+      font-size: clamp(0.68rem, 1.9vw, 0.82rem);
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--olive);
+      margin-top: 0.4rem;
+    }
+
+    .rule {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin: 1.1rem auto 1.35rem;
+      max-width: 360px;
+    }
+    .rule::before, .rule::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--tan-dark), transparent);
+    }
+    .rule .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--olive);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* —— About —— */
+    section.panel {
+      background: linear-gradient(180deg, #fffdf8 0%, var(--cream) 100%);
+      border: 1px solid var(--tan);
+      box-shadow:
+        0 0 0 3px var(--navy),
+        0 8px 22px rgba(7, 31, 50, 0.10);
+      padding: 1.4rem 1.35rem 1.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    section.panel::before {
+      content: "";
+      position: absolute;
+      inset: 5px;
+      border: 1px solid rgba(107, 115, 72, 0.35);
+      pointer-events: none;
+    }
+
+    .panel h2 {
+      font-family: Cinzel, serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 0.85rem;
+    }
+
+    .panel p {
+      color: var(--ink);
+      font-size: 0.95rem;
+      max-width: 58ch;
+      margin: 0 auto 0.85rem;
+      text-align: center;
+    }
+
+    .panel p:last-child { margin-bottom: 0; }
+
+    /* —— Units: stacked, 17 then 7 —— */
+    .units h2 {
+      font-family: Cinzel, serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--navy);
+      text-align: center;
+      margin: 0.15rem 0 1rem;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+    }
+
+    .card {
+      background: linear-gradient(165deg, #fffdf8 0%, #f0e6d0 100%);
+      border: 1px solid var(--tan);
+      box-shadow: 0 0 0 3px var(--navy), 0 6px 18px rgba(7, 31, 50, 0.09);
+      padding: 1.25rem 1.2rem 1.3rem;
+      position: relative;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 5px;
+      border: 1px solid rgba(107, 115, 72, 0.3);
+      pointer-events: none;
+    }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card .branch {
+      font-family: Cinzel, serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--olive);
+      margin-bottom: 0.3rem;
+    }
+
+    .card h3 {
+      font-family: Cinzel, serif;
+      font-size: 1.08rem;
+      letter-spacing: 0.06em;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+
+    .star-badge {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+    .star-badge svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      fill: #f7f2e6;
+      stroke: var(--navy);
+      stroke-width: 1.15;
+      filter: drop-shadow(0 1px 2px rgba(7,31,50,0.22));
+    }
+    .star-badge span {
+      position: relative;
+      z-index: 1;
+      font-family: Cinzel, serif;
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--navy);
+      line-height: 1;
+      padding-top: 2px;
+    }
+
+    .card .hist {
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-style: italic;
+      border-top: 1px solid rgba(154, 123, 79, 0.45);
+      padding-top: 0.65rem;
+      margin-top: 0.3rem;
+    }
+
+    .card .hist cite {
+      display: block;
+      font-style: normal;
+      font-size: 0.7rem;
+      letter-spacing: 0.02em;
+      color: var(--brown-soft);
+      margin-top: 0.4rem;
+      opacity: 0.95;
+    }
+
+
+    nav.site-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 0 0 1.15rem;
+      font-family: Cinzel, serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    nav.site-nav a {
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 0.15rem;
+    }
+    nav.site-nav a:hover,
+    nav.site-nav a[aria-current="page"] {
+      color: var(--red);
+      border-bottom-color: var(--tan-dark);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 1.85rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(154, 123, 79, 0.5);
+      font-family: Cinzel, serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--brown-soft);
+    }
+
+    footer .stars-mini {
+      display: flex;
+      justify-content: center;
+      gap: 1.15rem;
+      margin-bottom: 0.55rem;
+    }
+    footer .stars-mini svg {
+      width: 13px;
+      height: 13px;
+      fill: var(--tan-dark);
+    }
+
+    
+    .store-intro {
+      text-align: center;
+      margin: 0 auto 1.35rem;
+      max-width: 52ch;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.15rem;
+      margin-top: 0.25rem;
+    }
+
+    .product-card {
+      background: linear-gradient(165deg, #fffdf8 0%, #f0e6d0 100%);
+      border: 1px solid var(--tan);
+      box-shadow: 0 0 0 3px var(--navy), 0 6px 18px rgba(7, 31, 50, 0.09);
+      padding: 0.85rem 0.85rem 1.05rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .product-card::before {
+      content: "";
+      position: absolute;
+      inset: 5px;
+      border: 1px solid rgba(107, 115, 72, 0.3);
+      pointer-events: none;
+    }
+
+    .product-card .thumb {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: var(--cream-dark);
+      border: 1px solid rgba(154, 123, 79, 0.45);
+    }
+
+    .product-card .unit-tag {
+      font-family: Cinzel, serif;
+      font-size: 0.58rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--olive);
+    }
+
+    .product-card h3 {
+      font-family: Cinzel, serif;
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+      line-height: 1.35;
+    }
+
+    .product-card .desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-style: italic;
+      flex: 1;
+    }
+
+    .product-card .price {
+      font-family: Cinzel, serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      color: var(--brown);
+      text-transform: uppercase;
+    }
+
+    .product-card .btn-soon {
+      display: block;
+      width: 100%;
+      margin-top: 0.15rem;
+      padding: 0.55rem 0.75rem;
+      font-family: Cinzel, serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: var(--navy);
+      border: 1px solid var(--tan-dark);
+      box-shadow: inset 0 0 0 1px rgba(192, 57, 43, 0.35);
+      cursor: default;
+      pointer-events: none;
+      opacity: 0.92;
+    }
+
+    @media (max-width: 640px) {
+      .page { padding: 1.15rem 0.9rem 2.4rem; }
+      section.panel { padding: 1.15rem 1rem 1.3rem; }
+      .stars-row { gap: 1.1rem; }
+      .star { width: 20px; height: 20px; }
+      .seal-wrap img.seal { width: min(240px, 80vw); }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="seal-wrap">
+      <img class="seal" src="seal.png" width="280" height="280" alt="Great Lakes Division official seal: cream band with GREAT LAKES in red and DIVISION in navy, bugle horns, Great Lakes silhouette, and white stars marked 7 and 17" />
+    </div>
+
+    <header class="masthead">
+      <div class="stars-row" aria-hidden="true">
+        <svg class="star" viewBox="0 0 24 24" role="img"><polygon points="12,1.5 14.9,8.6 22.5,9.2 16.7,14.3 18.5,21.8 12,17.8 5.5,21.8 7.3,14.3 1.5,9.2 9.1,8.6"/></svg>
+        <svg class="star" viewBox="0 0 24 24" role="img"><polygon points="12,1.5 14.9,8.6 22.5,9.2 16.7,14.3 18.5,21.8 12,17.8 5.5,21.8 7.3,14.3 1.5,9.2 9.1,8.6"/></svg>
+      </div>
+      <div class="title-block">
+        <h1>GLD · Great Lakes Division</h1>
+        <p class="subtitle">Store · Placeholders Only</p>
+      </div>
+      <div class="rule" aria-hidden="true"><span class="dot"></span></div>
+    </header>
+
+    <nav class="site-nav" aria-label="Site">
+      <a href="index.html">Home</a>
+      <a href="store.html" aria-current="page">Store</a>
+    </nav>
+
+    <p class="store-intro">
+      Merchandise concepts for the division. Every listing below is a labeled placeholder —
+      prices are TBD, and nothing here can be purchased yet.
+    </p>
+
+    <section class="units" aria-labelledby="store-heading">
+      <h2 id="store-heading">Merchandise</h2>
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <footer>
+      <div class="stars-mini" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><polygon points="12,1.5 14.9,8.6 22.5,9.2 16.7,14.3 18.5,21.8 12,17.8 5.5,21.8 7.3,14.3 1.5,9.2 9.1,8.6"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12,1.5 14.9,8.6 22.5,9.2 16.7,14.3 18.5,21.8 12,17.8 5.5,21.8 7.3,14.3 1.5,9.2 9.1,8.6"/></svg>
+      </div>
+      GLD · Great Lakes Division · Information only<br />
+      <span style="display:inline-block;margin-top:0.45rem;letter-spacing:0.12em;text-transform:none;font-size:0.78rem;">GLDGreatLakes.com</span>
+    </footer>
+  </div>
+
+  <script src="products.js"></script>
+  <script>
+    (function () {
+      var grid = document.getElementById("product-grid");
+      if (!grid || typeof PRODUCTS === "undefined") return;
+      var fallback = "images/placeholder.svg";
+      PRODUCTS.forEach(function (p) {
+        var card = document.createElement("article");
+        card.className = "product-card";
+        var img = document.createElement("img");
+        img.className = "thumb";
+        img.alt = p.name || "Product placeholder";
+        img.src = (p.image && String(p.image).trim()) ? p.image : fallback;
+        img.onerror = function () { this.onerror = null; this.src = fallback; };
+        var unit = document.createElement("div");
+        unit.className = "unit-tag";
+        unit.textContent = p.unit || "GLD";
+        var h3 = document.createElement("h3");
+        h3.textContent = p.name || "Untitled";
+        var desc = document.createElement("p");
+        desc.className = "desc";
+        desc.textContent = p.description || "";
+        var price = document.createElement("div");
+        price.className = "price";
+        price.textContent = p.price || "TBD";
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "btn-soon";
+        btn.textContent = "Coming soon";
+        btn.disabled = true;
+        card.appendChild(img);
+        card.appendChild(unit);
+        card.appendChild(h3);
+        card.appendChild(desc);
+        card.appendChild(price);
+        card.appendChild(btn);
+        grid.appendChild(card);
+      });
+    })();
+  </script>
+</body>
+</html>

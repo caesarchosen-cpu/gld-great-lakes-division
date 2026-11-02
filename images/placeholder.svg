@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" role="img" aria-label="Placeholder">
+  <rect width="400" height="300" fill="#ebe3d0"/>
+  <rect x="12" y="12" width="376" height="276" fill="none" stroke="#0b3350" stroke-width="3"/>
+  <rect x="20" y="20" width="360" height="260" fill="none" stroke="#c4a574" stroke-width="1"/>
+  <circle cx="200" cy="120" r="42" fill="none" stroke="#0b3350" stroke-width="2"/>
+  <polygon points="200,88 208,108 230,110 213,124 218,146 200,134 182,146 187,124 170,110 192,108" fill="#c0392b"/>
+  <text x="200" y="210" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#0b3350" letter-spacing="3">COMING SOON</text>
+  <text x="200" y="235" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#6b7348" letter-spacing="2">GLD MERCHANDISE</text>
+</svg>

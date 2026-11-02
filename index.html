@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GLD · Great Lakes Division</title>
+  <meta name="description" content="GLD Great Lakes Division — Civil War milsim information. GLDGreatLakes.com." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
@@ -158,8 +159,8 @@
 
     .panel p:last-child { margin-bottom: 0; }
 
-    /* —— Subunits: stacked, 17 then 7 —— */
-    .subunits h2 {
+    /* —— Units: stacked, 17 then 7 —— */
+    .units h2 {
       font-family: Cinzel, serif;
       font-size: 1.05rem;
       letter-spacing: 0.14em;
@@ -264,6 +265,29 @@
       opacity: 0.95;
     }
 
+
+    nav.site-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 0 0 1.15rem;
+      font-family: Cinzel, serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    nav.site-nav a {
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 0.15rem;
+    }
+    nav.site-nav a:hover,
+    nav.site-nav a[aria-current="page"] {
+      color: var(--red);
+      border-bottom-color: var(--tan-dark);
+    }
+
     footer {
       text-align: center;
       margin-top: 1.85rem;
@@ -316,12 +340,17 @@
       <div class="rule" aria-hidden="true"><span class="dot"></span></div>
     </header>
 
+    <nav class="site-nav" aria-label="Site">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="store.html">Store</a>
+    </nav>
+
     <section class="panel" aria-labelledby="about-heading">
       <h2 id="about-heading">About the Division</h2>
       <p>
         GLD — the Great Lakes Division — is a Civil War milsim unit playing
         <em>War of Rights</em>. We organize as a division with two historical
-        subunits and gather players from across the Great Lakes region and beyond.
+        units and gather players from across the Great Lakes region and beyond.
       </p>
       <p>
         This page is for information only: who we are and which companies we field.
@@ -329,8 +358,8 @@
       </p>
     </section>
 
-    <section class="subunits" aria-labelledby="units-heading">
-      <h2 id="units-heading">Subunits</h2>
+    <section class="units" aria-labelledby="units-heading">
+      <h2 id="units-heading">Units</h2>
       <div class="cards">
         <!-- 17th Michigan first -->
         <article class="card">
@@ -379,7 +408,8 @@
         <svg viewBox="0 0 24 24"><polygon points="12,1.5 14.9,8.6 22.5,9.2 16.7,14.3 18.5,21.8 12,17.8 5.5,21.8 7.3,14.3 1.5,9.2 9.1,8.6"/></svg>
         <svg viewBox="0 0 24 24"><polygon points="12,1.5 14.9,8.6 22.5,9.2 16.7,14.3 18.5,21.8 12,17.8 5.5,21.8 7.3,14.3 1.5,9.2 9.1,8.6"/></svg>
       </div>
-      GLD · Great Lakes Division · Information only
+      GLD · Great Lakes Division · Information only<br />
+      <span style="display:inline-block;margin-top:0.45rem;letter-spacing:0.12em;text-transform:none;font-size:0.78rem;">GLDGreatLakes.com</span>
     </footer>
   </div>
 </body>
